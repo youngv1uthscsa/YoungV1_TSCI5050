@@ -1,6 +1,6 @@
 #'---
 #' title: "TSCI 5050: Introduction to Data Science"
-#' author: 'Vanessa Young'
+#' author: 'Author One ^1^, Author Two ^1^'
 #' abstract: |
 #'  | Provide a summary of objectives, study design, setting, participants,
 #'  | sample size, predictors, outcome, statistical analysis, results,
@@ -362,17 +362,17 @@ perf %>% tidy() %>% select(c("p.value")) %>% slice(-1) %>% unlist() %>% p.adjust
 
 datapath <-"https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Field-of-Study_04172025.zip"
 externaldata <-import(datapath)
-
+ 
 names(externaldata)
-
+ 
 summary(externaldata)
-
+ 
 sapply(externaldata,class)
 
 
 
 
-
+ 
 processeddata<-mutate(externaldata,
                       randomnumber=rnorm(n=n()),
                       month=sample(month.abb,size =n(), replace = TRUE ))
